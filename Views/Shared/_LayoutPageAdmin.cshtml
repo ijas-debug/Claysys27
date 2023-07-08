@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body style="background-color: #D8F9F9">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+        <div class="container">
+            @Html.ActionLink("Home", "AdminHome", "AdminLogin", new { area = "" }, new { @class = "navbar-brand" })
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+
+
+                    <li>@Html.ActionLink("Admin profile", "AdminWelcome", "AdminLogin", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("User Details", "UsersView", "AdminLogin", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("visa Applications", "ApplicantsView", "AdminLogin", new { area = "" }, new { @class = "nav-link" })</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div>
+        @RenderBody()
+
+        <hr />
+        
+
+                <!-- Footer -->
+        <footer class=" text-center text-dark">
+            <!-- Grid container -->
+            <div class="container p-4 footerayshel">
+                <!-- Section: Social media -->
+                <section class="mb-4">
+                    <!-- Facebook -->
+                    <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+
+
+                    <!-- Google -->
+                    <a class="btn btn-outline-dark btn-floating m-1" href="https://www.justdial.com/Malappuram/Ayshel-Boutique-Near-Musjid-Mangalam-Mlp/9999PX483-X483-190322202629-T6N6_BZDET" role="button">
+                        <i class="fab fa-google"></i>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a class="btn btn-outline-dark btn-floating m-1" href="https://www.instagram.com/ayshellshop/?hl=en" role="button">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <!-- Linkedin -->
+                    <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+
+
+                    <!-- Section: Social media -->
+                    <!-- Section: Text -->
+                    <section class="mb-4">
+                        <p>
+                            Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.
+                        </p>
+                    </section>
+                    <!-- Section: Text -->
+                    <!-- Copyright -->
+                    <div class="footerayshel">
+                        <div class="text-center p-3 " style="background-color: rgba(0, 0, 0, 0.2);">
+                            © 2020 Copyright:
+                            <a class="text-dark" href="https://mdbootstrap.com/">E-Visa.com</a>
+                        </div>
+                    </div>
+
+            </div>
+
+        </footer>
+
+
+
+
+
+
+
+                
+        
+   
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
